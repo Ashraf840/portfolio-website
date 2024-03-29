@@ -47,9 +47,7 @@ export default function Intro() {
             <motion.div className='flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium'
                 initial={{ opacity: 0, y: 100 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{
-                    delay: 0.1
-                }}
+                transition={{ delay: 0.1 }}
             >
                 <Link href="#contact" className='group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition'>
                     Contact me here <BsArrowRight className='opacity-70 group-hover:translate-x-1 transition' />{" "}

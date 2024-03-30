@@ -1,16 +1,30 @@
 "use client";
 
 import Image from 'next/image';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { BsArrowRight, BsLinkedin } from 'react-icons/bs';
 import { HiDownload } from 'react-icons/hi';
 import { FaGithubSquare } from 'react-icons/fa';
+import { useInView } from 'react-intersection-observer'
+import { useActiveSectionContext } from '@/src/context/active-section-context'
+
 
 export default function Intro() {
+    const { ref, inView } = useInView({
+        threshold: 0.5,
+    });
+    const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
+
+    useEffect(() => {
+        if (inView && Date.now() - timeOfLastClick > 1000) {
+            setActiveSection("Home")
+        }
+    }, [inView, setActiveSection, timeOfLastClick]);
+
     return (
-        <section id='home' className='mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]'>
+        <section ref={ref} id='home' className='mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]'>
             <div className="flex items-center justify-center">
                 <div>
                     <motion.div

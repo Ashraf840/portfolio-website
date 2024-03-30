@@ -1,13 +1,28 @@
 "use client"
 
-import React from 'react'
+import React, { useEffect } from 'react'
 import SectionHeading from '@/src/components/section-heading'
 import { motion } from 'framer-motion'
+import { useInView } from 'react-intersection-observer'
+import { useActiveSectionContext } from '@/src/context/active-section-context'
 
 export default function About() {
+    const { ref, inView } = useInView({
+        threshold: 0.75,
+    });
+    const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
+
+    useEffect(() => {
+        if (inView && Date.now() - timeOfLastClick > 1000) {
+            setActiveSection("About")
+        }
+    }, [inView, setActiveSection, timeOfLastClick]);
+
     return (
-        <motion.section className='mb-28 max-w-[45rem] text-center leading-8 sm:mb-40 scroll-mt-28'
-            initial={{ opacity: 0, y: 100 }}
+        < motion.section className='mb-28 max-w-[45rem] text-center leading-8 sm:mb-40 scroll-mt-28'
+            ref={ref}
+            initial={{ opacity: 0, y: 100 }
+            }
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.175 }}
             id='about'
@@ -39,6 +54,6 @@ export default function About() {
                 <span className="font-medium">history and philosophy</span>. I'm also
                 learning how to play the guitar.
             </p>
-        </motion.section>
+        </motion.section >
     )
 }

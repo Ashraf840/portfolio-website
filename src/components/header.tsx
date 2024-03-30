@@ -1,14 +1,14 @@
 "use client"
 
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from "framer-motion";
 import { links } from '@/lib/data';
 import Link from 'next/link';
 import clsx from "clsx";
+import { useActiveSectionContext } from '@/src/context/active-section-context';
 
 export default function Header() {
-    const [activeSection, setActiveSection] =
-        useState("Home");
+    const { activeSection, setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
     return (
         <header className='z-[999] relative'>
@@ -28,7 +28,10 @@ export default function Header() {
                                 <Link className={clsx('flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition', {
                                     "text-gray-950": activeSection === link.name
                                 })} href={link.hash}
-                                    onClick={() => setActiveSection(link.name)}
+                                    onClick={() => {
+                                        setActiveSection(link.name)
+                                        setTimeOfLastClick(Date.now())
+                                    }}
                                 >
                                     {link.name}
                                     {

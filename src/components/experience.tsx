@@ -12,7 +12,11 @@ export default function Experience() {
     const { ref } = useSectionInView('Experience');
 
     return (
-        <section ref={ref} id='experience'>
+        <section
+            ref={ref}
+            id='experience'
+            className='mb-28 scroll-mt-28 sm:mb-40'
+        >
             <SectionHeading>
                 My Experience
             </SectionHeading>

@@ -10,11 +10,13 @@ export default function ThemeSwitch() {
 
     const toggleTheme = () => {
         if (theme === "light") {
-            setTheme("dark");
-            window.localStorage.setItem("theme", "dark");
+            setTheme("dark");   // set to app's hook
+            window.localStorage.setItem("theme", "dark");   // set to localStorage
+            document.documentElement.classList.add("dark"); // add the dark class to DOM; required for tailwind's dark theme class
         } else {
             setTheme("light");
             window.localStorage.setItem("theme", "light");
+            document.documentElement.classList.remove("dark"); // remove the dark class to DOM
         }
     }
 
@@ -25,8 +27,13 @@ export default function ThemeSwitch() {
         // If not null, set theme to the app's setTheme state; Take dominant if user set the theme preference through explicitly setting the button; otherwise check the use's default theme pref from his OS.
         if (localTheme) {
             setTheme(localTheme)
+
+            if (localTheme === "dark") {
+                document.documentElement.classList.add("dark");
+            }
         } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
             setTheme("dark");
+            document.documentElement.classList.add("dark");
         }
 
     }, []);

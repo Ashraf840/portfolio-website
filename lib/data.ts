@@ -10,26 +10,32 @@ export const links = [
     {
         name: "Home",
         hash: "#home",
+        url: "/#home",
     },
     {
         name: "About",
         hash: "#about",
+        url: "/#about",
     },
     {
         name: "Projects",
         hash: "#projects",
+        url: "/#projects",
     },
     {
         name: "Skills",
         hash: "#skills",
+        url: "/#skills",
     },
     {
         name: "Experience",
         hash: "#experience",
+        url: "/#experience",
     },
     {
         name: "Contact",
         hash: "#contact",
+        url: "/#contact",
     },
 ] as const;
 

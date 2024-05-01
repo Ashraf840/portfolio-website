@@ -7,7 +7,7 @@ import Project from '@/src/app/projects/[projectSlug]/project';
 export default function Projects() {
     return (
         <section
-            className='flex flex-col items-center px-4 min-h-screen scroll-mt-28'>
+            className='flex flex-col items-center px-4 min-h-screen mb-20 sm:mb-28 scroll-mt-28'>
             <SectionHeading>
                 <div>My Projects</div>
             </SectionHeading>

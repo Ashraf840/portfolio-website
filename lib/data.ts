@@ -68,25 +68,25 @@ export const experiencesData = [
 
 export const projectsData = [
     {
-        title: "CorpComment",
-        slug: "crop-comment",
-        description:
-            "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
+        title: "iBAS++ Chat Operating System",
+        slug: "ibas-chat-operating-system",
+        projectBrief:
+            "I worked as a full-stack developer on this research based project for over a year. User can chat with Help Desk Officers for queries.",
         tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
         imageUrl: corpcommentImg,
     },
     {
-        title: "rmtDev",
-        slug: "rmt-dev",
-        description:
-            "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
+        title: "TechForing Website",
+        slug: "techforing-website",
+        projectBrief:
+            "Build the CI/CD pipeline using Jenkins. Established continuous deployment into AWS EC2.",
         tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
         imageUrl: rmtdevImg,
     },
     {
         title: "Word Analytics",
         slug: "word-analytics",
-        description:
+        projectBrief:
             "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
         tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
         imageUrl: wordanalyticsImg,

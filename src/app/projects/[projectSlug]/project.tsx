@@ -1,5 +1,6 @@
 "use client"
 
+import React from 'react'
 import Link from 'next/link'
 import { projectsData } from '@/lib/data'
 import Image from 'next/image'
@@ -17,7 +18,7 @@ const fadeInFromLeftAnimationVariants = {
     }
 };
 
-const fadeInFromRIghtAnimationVariants = {
+const fadeInFromRightAnimationVariants = {
     initial: {
         opacity: 0,
         x: 100,
@@ -30,7 +31,7 @@ const fadeInFromRIghtAnimationVariants = {
 
 type ProjectProps = (typeof projectsData)[number]
 
-export default function Project({ title, slug, projectBrief, imageUrl }: ProjectProps) {
+export default function Project({ title, slug, projectBrief, thumbnailImageUrl, projectSnaps }: ProjectProps) {
     return (
         <div className='group mt-10 mb-3 sm:mb-28 last:mb-0'>
             <Link href={`/projects/${slug}`}>
@@ -55,7 +56,27 @@ export default function Project({ title, slug, projectBrief, imageUrl }: Project
                         <h3 className='font-semibold mt-2'>{projectBrief}</h3>
                     </div>
                     <div className='flex justify-between mt-8'>
-                        <motion.div
+                        {projectSnaps.map((snaps, index) => {
+                            const animationVariants = index % 2 === 0 ? fadeInFromLeftAnimationVariants : fadeInFromRightAnimationVariants;
+                            return (
+                                <React.Fragment key={index}>
+                                    <motion.div
+                                        variants={animationVariants}
+                                        initial="initial"
+                                        whileInView="animate"
+                                        viewport={{
+                                            once: true,
+                                        }}>
+                                        <Image
+                                            src={snaps}
+                                            alt='Project Snapshot'
+                                            quality={95}
+                                            className='w-[30rem] h-[18rem] rounded-lg shadow-xl hover:scale-105 transition' />
+                                    </motion.div>
+                                </React.Fragment>
+                            )
+                        })}
+                        {/* <motion.div
                             variants={fadeInFromLeftAnimationVariants}
                             initial="initial"
                             whileInView="animate"
@@ -63,26 +84,26 @@ export default function Project({ title, slug, projectBrief, imageUrl }: Project
                                 once: true,
                             }}>
                             <Image
-                                src={imageUrl}
+                                src={thumbnailImageUrl}
                                 alt='Project Snapshot'
                                 quality={95}
-                                className='w-[28.25rem] h-[28.25rem] rounded-lg shadow-xl hover:scale-105 transition' />
+                                className='w-[28rem] h-[18rem] rounded-lg shadow-xl hover:scale-105 transition' />
                         </motion.div>
                         <motion.div
-                            variants={fadeInFromRIghtAnimationVariants}
+                            variants={fadeInFromRightAnimationVariants}
                             initial="initial"
                             whileInView="animate"
                             viewport={{
                                 once: true,
                             }}>
                             <Image
-                                src={imageUrl}
+                                src={thumbnailImageUrl}
                                 alt='Project Snapshot'
                                 quality={95}
-                                className='w-[28.25rem] h-[28.25rem] rounded-lg shadow-xl hover:scale-105 transition' />
-                        </motion.div>
+                                className='w-[28rem] h-[18rem] rounded-lg shadow-xl hover:scale-105 transition' />
+                        </motion.div> */}
                     </div>
-                    <button className="group bg-white px-7 py-3 mt-7 max-w-48 flex items-center justify-center gap-3 rounded-full outline-none focus:scale-[1.2] hover:scale-[1.2] active:scale-[1.1] transition cursor-pointer borderBlack-2 dark:bg-white/10 dark:hover:bg-white/15 mb-1 sm:mb-0 opacity-80 hover:opacity-90 mx-auto">
+                    <button className="group bg-white px-7 py-3 mt-8 max-w-48 flex items-center justify-center gap-3 rounded-full outline-none focus:scale-[1.2] hover:scale-[1.2] active:scale-[1.1] transition cursor-pointer borderBlack-2 dark:bg-white/10 dark:hover:bg-white/15 mb-1 sm:mb-0 opacity-80 hover:opacity-90 mx-auto">
                         View Detail
                         <AiFillEye className='mt-[.15rem] opacity-30 group-hover:scale-150 group-hover:opacity-60 transition duration-300' />
                     </button>

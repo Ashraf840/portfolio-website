@@ -15,7 +15,7 @@ export default function Project(
         slug,
         projectBrief,
         tags,
-        imageUrl,
+        thumbnailImageUrl,
     }: ProjectProps) {
 
     const ref = useRef<HTMLDivElement>(null);
@@ -49,10 +49,10 @@ export default function Project(
                         </ul>
                     </div>
                     <Image
-                        src={imageUrl}
+                        src={thumbnailImageUrl}
                         alt='Project I worked on'
                         quality={95}
-                        className='absolute hidden sm:block top-8 -right-40 w-[28.25rem] rounded-t-lg shadow-2xl 
+                        className='absolute hidden sm:block top-8 -right-40 w-[28.25rem] h-[20rem] rounded-t-lg shadow-2xl 
             transition
             group-hover:scale-[1.04]
             group-hover:-translate-x-3

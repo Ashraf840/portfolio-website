@@ -2,8 +2,12 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import corpcommentImg from "@/public/corpcomment.png";
-import rmtdevImg from "@/public/rmtdev.png";
+import ibasThumbnailImg from "@/public/ibas-thumbnail-image.png";
+import ibasChatroomImg from "@/public/ibas-chatroom.png";
+import ibasDapImg from "@/public/ibas-dap.png";
+import techforingThumnailImg from "@/public/techforing-thumnail-image.png";
+import techforingSnapImg1 from "@/public/techforing-img-1.png";
+import techforingSnapImg2 from "@/public/techforing-img-2.png";
 import wordanalyticsImg from "@/public/wordanalytics.png";
 
 export const links = [
@@ -73,7 +77,8 @@ export const projectsData = [
         projectBrief:
             "I worked as a full-stack developer on this research based project for over a year. User can chat with Help Desk Officers for queries.",
         tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-        imageUrl: corpcommentImg,
+        thumbnailImageUrl: ibasThumbnailImg,
+        projectSnaps: [ibasChatroomImg, ibasDapImg],
     },
     {
         title: "TechForing Website",
@@ -81,16 +86,18 @@ export const projectsData = [
         projectBrief:
             "Build the CI/CD pipeline using Jenkins. Established continuous deployment into AWS EC2.",
         tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-        imageUrl: rmtdevImg,
+        thumbnailImageUrl: techforingThumnailImg,
+        projectSnaps: [techforingSnapImg1, techforingSnapImg2],
     },
-    {
-        title: "Word Analytics",
-        slug: "word-analytics",
-        projectBrief:
-            "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-        tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-        imageUrl: wordanalyticsImg,
-    },
+    // {
+    //     title: "Word Analytics",
+    //     slug: "word-analytics",
+    //     projectBrief:
+    //         "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
+    //     tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
+    //     thumbnailImageUrl: wordanalyticsImg,
+    //     projectSnaps: [],
+    // },
 ] as const;
 
 export const skillsData = [

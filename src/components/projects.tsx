@@ -40,7 +40,7 @@ export default function Projects() {
             </div>
             <Link className="group bg-white px-7 py-3 mt-7 max-w-48 flex items-center justify-center gap-3 rounded-full outline-none focus:scale-[1.2] hover:scale-[1.2] active:scale-[1.1] transition cursor-pointer borderBlack-2 dark:bg-white/10 dark:hover:bg-white/15 mb-1 sm:mb-0 opacity-80 hover:opacity-90 mx-auto" href='/projects'>
                 Show More
-                <AiFillEye className='mt-[.15rem] opacity-30 group-hover:scale-150 group-hover:opacity-60 transition duration-500' />
+                <AiFillEye className='mt-[.15rem] opacity-30 group-hover:scale-150 group-hover:opacity-60 transition duration-300' />
             </Link>
         </section>
     )

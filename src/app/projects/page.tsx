@@ -1,7 +1,7 @@
 import React from 'react'
 import { projectsData } from '@/lib/data'
-import Link from 'next/link'
 import SectionHeading from '@/src/components/section-heading'
+import Project from '@/src/app/projects/[projectSlug]/project';
 
 
 export default function Projects() {
@@ -24,15 +24,3 @@ export default function Projects() {
     )
 }
 
-type ProjectProps = (typeof projectsData)[number]
-
-function Project({ title, slug, description, tags, imageUrl }: ProjectProps) {
-    return (
-        <Link href={`/projects/${slug}`}>
-            <section className='flex justify-between gap-4'>
-                <h1>{title}</h1>
-                <p>{slug}</p>
-            </section>
-        </Link>
-    )
-}

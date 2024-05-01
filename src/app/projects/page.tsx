@@ -3,7 +3,8 @@ import { projectsData } from '@/lib/data'
 
 export default function Projects() {
     return (
-        <section>
+        <section
+            className='flex flex-col items-center px-4 min-h-screen'>
             <div>My Projects</div>
             <div>
                 {
@@ -24,14 +25,7 @@ function Project({ title, description, tags, imageUrl }: ProjectProps) {
     return (
         <section>
             <h1>{title}</h1>
-            <p>{description}</p>
-            <ul>
-                {
-                    tags.map((tag, index) => (
-                        <li key={index}>{tag}</li>
-                    ))
-                }
-            </ul>
+
         </section>
     )
 }

@@ -6,7 +6,6 @@ import { projectsData } from '@/lib/data'
 import Project from '@/src/components/project'
 import { useSectionInView } from '@/lib/hooks'
 import Link from 'next/link'
-import { HiDownload } from 'react-icons/hi'
 import { AiFillEye } from "react-icons/ai";
 
 export default function Projects() {

@@ -9,6 +9,7 @@ import techforingThumnailImg from "@/public/techforing-thumnail-image.png";
 import techforingSnapImg1 from "@/public/techforing-img-1.png";
 import techforingSnapImg2 from "@/public/techforing-img-2.png";
 import wordanalyticsImg from "@/public/wordanalytics.png";
+import onlineFoodOrderingSystem from '@/public/online-food-ordering-system.jpg';
 
 export const links = [
     {
@@ -89,15 +90,15 @@ export const projectsData = [
         thumbnailImageUrl: techforingThumnailImg,
         projectSnaps: [techforingSnapImg1, techforingSnapImg2],
     },
-    // {
-    //     title: "Word Analytics",
-    //     slug: "word-analytics",
-    //     projectBrief:
-    //         "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    //     tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    //     thumbnailImageUrl: wordanalyticsImg,
-    //     projectSnaps: [],
-    // },
+    {
+        title: "Multi Vendor Food Ordering System",
+        slug: "multi-vendor-food-ordering-system",
+        projectBrief:
+            "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
+        tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
+        thumbnailImageUrl: onlineFoodOrderingSystem,
+        projectSnaps: [onlineFoodOrderingSystem],
+    },
 ] as const;
 
 export const skillsData = [

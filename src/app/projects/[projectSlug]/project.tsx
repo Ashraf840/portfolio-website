@@ -32,6 +32,7 @@ const fadeInFromRightAnimationVariants = {
 type ProjectProps = (typeof projectsData)[number]
 
 export default function Project({ title, slug, projectBrief, thumbnailImageUrl, projectSnaps }: ProjectProps) {
+    const projectSnapLength = projectSnaps.length;
     return (
         <div className='group mt-10 mb-3 sm:mb-28 last:mb-0'>
             <Link href={`/projects/${slug}`}>
@@ -55,7 +56,7 @@ export default function Project({ title, slug, projectBrief, thumbnailImageUrl, 
                     <div>
                         <h3 className='font-semibold mt-2'>{projectBrief}</h3>
                     </div>
-                    <div className='flex justify-between mt-8'>
+                    <div className={`flex ${projectSnapLength > 1 ? 'justify-between' : 'justify-center'} mt-8`}>
                         {projectSnaps.map((snaps, index) => {
                             const animationVariants = index % 2 === 0 ? fadeInFromLeftAnimationVariants : fadeInFromRightAnimationVariants;
                             return (
@@ -76,7 +77,9 @@ export default function Project({ title, slug, projectBrief, thumbnailImageUrl, 
                                 </React.Fragment>
                             )
                         })}
-                        {/* <motion.div
+                    </div>
+                    {/* <div className='flex justify-between mt-8'>
+                        <motion.div
                             variants={fadeInFromLeftAnimationVariants}
                             initial="initial"
                             whileInView="animate"
@@ -101,8 +104,8 @@ export default function Project({ title, slug, projectBrief, thumbnailImageUrl, 
                                 alt='Project Snapshot'
                                 quality={95}
                                 className='w-[28rem] h-[18rem] rounded-lg shadow-xl hover:scale-105 transition' />
-                        </motion.div> */}
-                    </div>
+                        </motion.div> 
+                    </div> */}
                     <button className="group bg-white px-7 py-3 mt-8 max-w-48 flex items-center justify-center gap-3 rounded-full outline-none focus:scale-[1.2] hover:scale-[1.2] active:scale-[1.1] transition cursor-pointer borderBlack-2 dark:bg-white/10 dark:hover:bg-white/15 mb-1 sm:mb-0 opacity-80 hover:opacity-90 mx-auto">
                         View Detail
                         <AiFillEye className='mt-[.15rem] opacity-30 group-hover:scale-150 group-hover:opacity-60 transition duration-300' />

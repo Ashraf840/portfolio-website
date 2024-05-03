@@ -24,6 +24,7 @@ export default function Projects() {
                     //     </React.Fragment>
                     // ))
 
+                    // Show only first 2 projects
                     (() => {
                         const newArray = [];
                         for (let index = 0; index < 2; index++) {

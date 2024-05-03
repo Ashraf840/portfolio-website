@@ -71,6 +71,14 @@ export const experiencesData = [
     },
 ] as const;
 
+type ProjectFeaturesDetail = {
+    [key: string]: {
+        description: string;
+        image: string[];
+        video: string;
+    };
+};
+
 export const projectsData = [
     {
         title: "iBAS++ Chat Operating System",
@@ -80,6 +88,48 @@ export const projectsData = [
         tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
         thumbnailImageUrl: ibasThumbnailImg,
         projectSnaps: [ibasChatroomImg, ibasDapImg],
+        projectFeaturesDetail: {
+            feature1name: {
+                description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+                image: ["img1", "img2", "img3"],
+                video: "vid1",
+            },
+            feature2name: {
+                description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+                image: ["img1", "img2", "img3", "img4"],
+                video: "vid1",
+            },
+            feature3name: {
+                description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+                image: ["img1", "img2", "img3", "img4", "img5"],
+                video: "vid1",
+            },
+            feature4name: {
+                description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+                image: ["img1", "img2"],
+                video: "vid1",
+            },
+            feature5name: {
+                description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+                image: ["img1"],
+                video: "vid1",
+            },
+            feature6name: {
+                description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+                image: ["img1", "img2", "img3", "img4", "img5", "img6"],
+                video: "vid1",
+            },
+            feature7name: {
+                description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+                image: ["img1", "img2", "img3", "img4"],
+                video: "vid1",
+            },
+            feature8name: {
+                description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+                image: ["img1", "img2"],
+                video: "vid1",
+            },
+        } as ProjectFeaturesDetail,
     },
     {
         title: "TechForing Website",
@@ -89,6 +139,23 @@ export const projectsData = [
         tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
         thumbnailImageUrl: techforingThumnailImg,
         projectSnaps: [techforingSnapImg1, techforingSnapImg2],
+        projectFeaturesDetail: {
+            feature1name: {
+                description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+                image: ["img1", "img2", "img3"],
+                video: "vid1",
+            },
+            feature2name: {
+                description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+                image: ["img1", "img2", "img3"],
+                video: "vid1",
+            },
+            feature3name: {
+                description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+                image: ["img1", "img2", "img3"],
+                video: "vid1",
+            },
+        } as ProjectFeaturesDetail,
     },
     {
         title: "Multi Vendor Food Ordering System",
@@ -98,6 +165,33 @@ export const projectsData = [
         tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
         thumbnailImageUrl: onlineFoodOrderingSystem,
         projectSnaps: [onlineFoodOrderingSystem],
+        projectFeaturesDetail: {
+            feature1name: {
+                description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+                image: ["img1", "img2", "img3"],
+                video: "vid1",
+            },
+            feature2name: {
+                description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+                image: ["img1", "img2", "img3"],
+                video: "vid1",
+            },
+            feature3name: {
+                description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+                image: ["img1", "img2", "img3"],
+                video: "vid1",
+            },
+            feature4name: {
+                description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+                image: ["img1", "img2", "img3"],
+                video: "vid1",
+            },
+            feature5name: {
+                description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+                image: ["img1", "img2", "img3"],
+                video: "vid1",
+            },
+        } as ProjectFeaturesDetail,
     },
 ] as const;
 

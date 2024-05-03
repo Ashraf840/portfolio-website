@@ -34,7 +34,7 @@ type ProjectProps = (typeof projectsData)[number]
 export default function Project({ title, slug, projectBrief, thumbnailImageUrl, projectSnaps }: ProjectProps) {
     const projectSnapLength = projectSnaps.length;
     return (
-        <div className='group mt-10 mb-3 sm:mb-28 last:mb-0'>
+        <div className='mt-10 mb-3 sm:mb-28 last:mb-0'>
             <Link href={`/projects/${slug}`}>
                 <motion.section
                     initial={{

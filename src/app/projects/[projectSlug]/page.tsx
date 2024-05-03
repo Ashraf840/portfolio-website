@@ -69,17 +69,17 @@ export default function ProjectSlug({ params }: {
                                 </div>
                             </div>
 
-                            <div className='max-w-[60%] mt-20'>
-                                <h1 className='text-3xl'>Features I've Built</h1>
+                            <div className='w-[60%] mt-20'>
+                                <h1 className='text-3xl text-center'>Features I've Built</h1>
                                 {Object.keys(project.projectFeaturesDetail).map((ftKey) => (
-                                    <div key={ftKey}>
-                                        <h1 className='text-xl'>{ftKey}</h1>
+                                    <div className='mt-20' key={ftKey}>
+                                        <h1 className='text-xl font-semibold'>{project.projectFeaturesDetail[ftKey].name}</h1>
                                         <p>{project.projectFeaturesDetail[ftKey].description}</p>
-                                        <div>
+                                        {/* <div>
                                             {project.projectFeaturesDetail[ftKey].image.map((img, index) => (
                                                 <img key={index} src={img} alt={`Feature ${ftKey} Image ${index + 1}`} />
                                             ))}
-                                        </div>
+                                        </div> */}
                                     </div>
                                 ))}
                             </div>

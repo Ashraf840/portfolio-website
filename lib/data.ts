@@ -73,6 +73,7 @@ export const experiencesData = [
 
 type ProjectFeaturesDetail = {
     [key: string]: {
+        name: string;
         description: string;
         image: string[];
         video: string;
@@ -89,42 +90,68 @@ export const projectsData = [
         thumbnailImageUrl: ibasThumbnailImg,
         projectSnaps: [ibasChatroomImg, ibasDapImg],
         projectFeaturesDetail: {
-            feature1name: {
-                description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+            feature1: {
+                name: "Authentication & Authorization (Login Page)",
+                description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa ad sequi nesciunt facere natus reprehenderit ipsum labore alias, excepturi, rerum ut fugiat! Tempora voluptates aliquid magnam quibusdam voluptatem vel exercitationem explicabo illo et, dolorem possimus facilis molestias id inventore ex sed harum maiores earum ut nostrum porro soluta numquam. Minima, illum quisquam beatae blanditiis eveniet pariatur tempora quas porro, maxime accusantium possimus. Hic exercitationem, eligendi cumque possimus est ab, repudiandae alias minus voluptates minima provident, quasi nemo labore dolor natus nam dolores corporis molestiae! Iusto illo alias assumenda laudantium, tempora, hic exercitationem repellendus ipsam, commodi sapiente facere odit dicta quis.",
                 image: ["img1", "img2", "img3"],
                 video: "vid1",
             },
-            feature2name: {
+            feature2: {
+                name: "Authentication & Authorization (From Chatbot)",
                 description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
                 image: ["img1", "img2", "img3", "img4"],
                 video: "vid1",
             },
-            feature3name: {
+            feature3: {
+                name: "Build & Integrate TA/DA Module in Chatbot UI",
                 description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
                 image: ["img1", "img2", "img3", "img4", "img5"],
                 video: "vid1",
             },
-            feature4name: {
+            feature4: {
+                name: "Real Time Message Requests Routing to HDO (Location based)",
                 description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
                 image: ["img1", "img2"],
                 video: "vid1",
             },
-            feature5name: {
+            feature5: {
+                name: "1-to-1 Messaging Platform for User & HDO",
                 description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
                 image: ["img1"],
                 video: "vid1",
             },
-            feature6name: {
+            feature6: {
+                name: "Fetch Previous Messaging Between User & HDO in the Chatroom",
                 description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
                 image: ["img1", "img2", "img3", "img4", "img5", "img6"],
                 video: "vid1",
             },
-            feature7name: {
+            feature7: {
+                name: "4 Types of Reply Modes in HDO end inside Chatroom",
                 description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
                 image: ["img1", "img2", "img3", "img4"],
                 video: "vid1",
             },
-            feature8name: {
+            feature8: {
+                name: "Collect Feedbacks from User on HDO's Reply",
+                description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+                image: ["img1", "img2"],
+                video: "vid1",
+            },
+            feature9: {
+                name: "Build Backend CRUD APIs & Angular Frontend For Data Analytics Panel",
+                description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+                image: ["img1", "img2"],
+                video: "vid1",
+            },
+            feature10: {
+                name: "Show Real Time Data Clustering Loading Process in DAP",
+                description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+                image: ["img1", "img2"],
+                video: "vid1",
+            },
+            feature11: {
+                name: "Show Real Time Model Training Progress Bar in DAP",
                 description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
                 image: ["img1", "img2"],
                 video: "vid1",
@@ -140,17 +167,20 @@ export const projectsData = [
         thumbnailImageUrl: techforingThumnailImg,
         projectSnaps: [techforingSnapImg1, techforingSnapImg2],
         projectFeaturesDetail: {
-            feature1name: {
+            feature1: {
+                name: "",
                 description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
                 image: ["img1", "img2", "img3"],
                 video: "vid1",
             },
-            feature2name: {
+            feature2: {
+                name: "",
                 description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
                 image: ["img1", "img2", "img3"],
                 video: "vid1",
             },
-            feature3name: {
+            feature3: {
+                name: "",
                 description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
                 image: ["img1", "img2", "img3"],
                 video: "vid1",
@@ -166,27 +196,32 @@ export const projectsData = [
         thumbnailImageUrl: onlineFoodOrderingSystem,
         projectSnaps: [onlineFoodOrderingSystem],
         projectFeaturesDetail: {
-            feature1name: {
+            feature1: {
+                name: "",
                 description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
                 image: ["img1", "img2", "img3"],
                 video: "vid1",
             },
-            feature2name: {
+            feature2: {
+                name: "",
                 description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
                 image: ["img1", "img2", "img3"],
                 video: "vid1",
             },
-            feature3name: {
+            feature3: {
+                name: "",
                 description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
                 image: ["img1", "img2", "img3"],
                 video: "vid1",
             },
-            feature4name: {
+            feature4: {
+                name: "",
                 description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
                 image: ["img1", "img2", "img3"],
                 video: "vid1",
             },
-            feature5name: {
+            feature5: {
+                name: "",
                 description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
                 image: ["img1", "img2", "img3"],
                 video: "vid1",

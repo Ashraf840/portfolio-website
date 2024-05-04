@@ -95,7 +95,7 @@ export default function ProjectSlug({ params }: {
                             </div>
 
                             <div className='w-[60%] mt-20'>
-                                <h1 className='text-3xl text-center'>Features I've Built</h1>
+                                <h1 className='text-3xl text-center'>Features I&apos;ve Built</h1>
                                 {Object.keys(project.projectFeaturesDetail).map((ftKey) => {
                                     const vidIdObject = { vidId: project.projectFeaturesDetail[ftKey].video };
                                     return (

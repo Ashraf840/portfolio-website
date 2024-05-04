@@ -289,7 +289,7 @@ export const skillsData = [
     "Aamazon RDS",
     "Amazon S3",
     "Aamazon Route 53",
-    "Aamazon Route 53",
+    "AWS Lambda",
     "Apache Airflow",
     "Linux",
     "Rust",

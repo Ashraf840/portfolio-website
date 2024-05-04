@@ -1,6 +1,6 @@
 "use client"
 
-import React from 'react'
+import React, { useState } from 'react'
 import SectionHeading from '@/src/components/section-heading'
 import { motion } from 'framer-motion'
 import { useSectionInView } from '@/lib/hooks'
@@ -8,9 +8,22 @@ import { sendEMail } from '@/src/actions/sendEmail'
 import SubmitBtn from '@/src/components/submit-btn'
 import toast from 'react-hot-toast'
 
+
 export default function Contact() {
     const { ref } = useSectionInView('Contact');
 
+    const [formData, setFormData] = useState({
+        senderEmail: '',
+        message: ''
+    });
+
+    const handleChange = (e: { target: { name: any; value: any } }) => {
+        const { name, value } = e.target;
+        setFormData(prevState => ({
+            ...prevState,
+            [name]: value
+        }));
+    };
 
     return (
         <motion.section
@@ -40,14 +53,21 @@ export default function Contact() {
                 if (error) {
                     toast.error(error)
                     return;
+                } else {
+                    toast.success("Email sent successfully!");
+                    // Reset form data after successful email sending
+                    setFormData({
+                        senderEmail: '',
+                        message: ''
+                    });
                 }
-
-                toast.success("Email sent successfully!")
             }}>
                 <input
                     type="email"
                     name='senderEmail'
                     className='h-14 px-4 rounded-lg borderBlack dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none'
+                    value={formData.senderEmail}
+                    onChange={handleChange}
                     required
                     maxLength={500}
                     placeholder='Your email'
@@ -55,6 +75,8 @@ export default function Contact() {
                 <textarea
                     className='h-52 my-3 rounded-lg borderBlack p-4 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none'
                     name='message'
+                    value={formData.message}
+                    onChange={handleChange}
                     required
                     maxLength={5000}
                     placeholder='Your message'

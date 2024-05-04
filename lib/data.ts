@@ -45,28 +45,31 @@ export const links = [
 
 export const experiencesData = [
     {
-        title: "Graduated bootcamp",
-        location: "Miami, FL",
+        company: "Doer Services PLC",
+        title: "Full-Stack Engineer",
+        location: "Dhaka, Bangladesh",
         description:
-            "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
-        icon: React.createElement(LuGraduationCap),
-        date: "2019",
-    },
-    {
-        title: "Front-End Developer",
-        location: "Orlando, FL",
-        description:
-            "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
+            "I served as a full stack engineer with the responsibility of maintaining application deployment. My stack includes Django, Flask, Angular, Pandas, Numpy, Asynchronous Programming, DRF, PostgreSQL",
         icon: React.createElement(CgWorkAlt),
-        date: "2019 - 2021",
+        date: "Feb 2021 - April 2024",
     },
     {
-        title: "Full-Stack Developer",
-        location: "Houston, TX",
+        company: "TechForing Ltd.",
+        title: "Backend Developer",
+        location: "London, United Kingdom",
         description:
-            "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-        icon: React.createElement(FaReact),
-        date: "2021 - present",
+            "Build, configure, automate the applications & their deployments using Jenkins and hosted in AWS. I got hands on experience with variaous AWS services including EC2, Route53, RDS, RedShift, ECS.",
+        icon: React.createElement(CgWorkAlt),
+        date: "May 2022 - Dec 2022",
+    },
+    {
+        company: "Creative IT Institute",
+        title: "Jr. Python Developer",
+        location: "Dhaka, Bangladesh",
+        description:
+            "I'ver build various applications for in-house operations including the contribution to an LMS with over 1 million user base. Besides, building software, I have also taught over 300 students about building real world applications using Django framework.",
+        icon: React.createElement(CgWorkAlt),
+        date: "Feb 2021 - April 2022",
     },
 ] as const;
 
@@ -250,6 +253,7 @@ export const skillsData = [
     "JavaScript",
     "Angular",
     "Django",
+    "Django Channels",
     "TypeScript",
     "HTML",
     "CSS",

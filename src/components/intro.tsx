@@ -9,6 +9,7 @@ import { HiDownload } from 'react-icons/hi';
 import { FaGithubSquare } from 'react-icons/fa';
 import { useSectionInView } from '@/lib/hooks';
 import { useActiveSectionContext } from '@/src/context/active-section-context';
+import myDP from "@/public/my-dp.jpeg";
 
 
 export default function Intro() {
@@ -31,13 +32,13 @@ export default function Intro() {
                         }}
                     >
                         <Image
-                            src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            src={myDP}
                             alt='Sample portrait'
                             width="192"
                             height="192"
                             quality="95"
                             priority={true}
-                            className='h-24 w-24 rounded-full object-cover border-[0.35rem] border-white shadow-xl' />
+                            className='h-40 w-40 rounded-full object-cover border-[0.35rem] border-white shadow-xl' />
 
                     </motion.div>
 
@@ -48,7 +49,7 @@ export default function Intro() {
                 initial={{ opacity: 0, y: 100 }}
                 animate={{ opacity: 1, y: 0 }}
             >
-                <span className="font-bold">Hello, I&apos;m Kh Tanjim Ashraf.</span> I&apos;m a <span className="font-bold">software engineer</span> with <span className="font-bold">4 years</span> of experience. I engineer web apps with <span className="italic">real-world significance.</span>
+                <span className="font-bold">Hello, I&apos;m Kh Tanjim Ashraf.</span> I&apos;m a <span className="font-bold">software engineer</span> with <span className="font-bold">4 years</span> of experience. I build web apps with <span className="italic">real-world significance.</span>
             </motion.h1>
 
             <motion.div className='flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium'

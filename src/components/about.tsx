@@ -22,12 +22,12 @@ export default function About() {
                 <Link href='/profile'>About me</Link>
             </SectionHeading>
             <p className="mb-3">
-                After graduating with a degree in <span className="font-medium">Accounting</span>, I decided to pursue my passion for programming. I enrolled in a coding bootcamp and learned <span className="font-medium">full-stack web development</span>. <span className="italic">My favorite part of programming</span> is the problem-solving aspect. I <span className="underline">love</span> the feeling of finally figuring out a solution to a problem. My core stack is <span className="font-medium"> React, Next.js, Node.js, and MongoDB </span>. I am also familiar with TypeScript and Prisma. I am always looking to learn new technologies. I am currently looking for a <span className="font-medium">full-time position</span> as a software developer.
+                I'm a seasoned software engineer with <span className="font-medium">four years</span> of hands-on experience crafting robust, scalable solutions across diverse domains. My passion for problem-solving propels me to explore and master new technologies continually. Proficient in <span className="italic">Python, JavaScript, Angular, Django, TypeScript, HTML, CSS, and Tailwind</span>, I excel in <span className="font-medium">dynamic, innovative environments</span>. With expertise in back-end technologies like Docker, Git, PostgreSQL, FastAPI, WebSocket, and webRTC, I design and implement efficient <span className="font-medium">RESTful APIs</span> and <span className="font-medium underline">real-time applications</span>, ensuring seamless client-server communication. I deploy and manage applications effortlessly using NGINX, uWSGI, Gunicorn, Daphne, and Redis.
+
             </p>
 
             <p>
-                <span className="italic">When I&apos;m not coding</span>, I enjoy playing video games, watching movies, and playing with my dog. I also enjoy <span className="font-medium">learning new things</span>. I am currently learning about <span className="font-medium">history and philosophy</span>. I&apos;m also
-                learning how to play the guitar.
+                Skilled in data analysis with Pandas and Numpy, I derive actionable insights from complex datasets. Experienced in continuous integration and deployment pipelines with <span className="font-medium">Jenkins</span>, I ensure reliable software delivery. My database proficiency extends to MySQL, Oracle, <span className="underline">ClickHouse</span>, and cloud-based solutions like Amazon RDS, with infrastructure management expertise in Amazon EC2, Amazon Route 53, and Apache Airflow. Adept in Linux environments, I streamline communication and project management using tools like <span className="font-medium">Slack</span> and <span className="font-medium">Atlassian Jira</span>, fostering collaboration and efficiency. In essence, I'm a versatile software engineer dedicated to innovation, armed with a diverse skill set to tackle challenges and deliver exceptional results.
             </p>
         </motion.section >
     )

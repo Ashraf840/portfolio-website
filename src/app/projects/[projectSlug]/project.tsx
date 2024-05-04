@@ -31,7 +31,7 @@ const fadeInFromRightAnimationVariants = {
 
 type ProjectProps = (typeof projectsData)[number]
 
-export default function Project({ title, slug, projectBrief, thumbnailImageUrl, projectSnaps }: ProjectProps) {
+export default function Project({ title, slug, projectThumbnailBrief, thumbnailImageUrl, projectSnaps }: ProjectProps) {
     const projectSnapLength = projectSnaps.length;
     return (
         <div className='mt-10 mb-3 sm:mb-28 last:mb-0'>
@@ -54,7 +54,7 @@ export default function Project({ title, slug, projectBrief, thumbnailImageUrl, 
                         <h1 className='text-3xl font-bold'>{title}</h1>
                     </div>
                     <div>
-                        <h3 className='font-semibold mt-2'>{projectBrief}</h3>
+                        <h3 className='font-semibold mt-2'>{projectThumbnailBrief}</h3>
                     </div>
                     <div className={`flex ${projectSnapLength > 1 ? 'justify-between' : 'justify-center'} mt-8`}>
                         {projectSnaps.map((snaps, index) => {

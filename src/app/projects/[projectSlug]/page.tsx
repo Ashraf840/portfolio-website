@@ -72,7 +72,7 @@ export default function ProjectSlug({ params }: {
                                         <h1 className='text-3xl'>Key Features</h1>
                                         <ul>
                                             {project.keyFeatures.map((feature, index) => (
-                                                <li className='mt-3'>
+                                                <li className='mt-3' key={index}>
                                                     {index + 1}. {feature}
                                                 </li>
                                             ))}

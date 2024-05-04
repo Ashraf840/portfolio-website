@@ -54,7 +54,7 @@ export const experiencesData = [
         date: "Feb 2021 - April 2024",
     },
     {
-        company: "TechForing Ltd.",
+        company: "TechForing Ltd",
         title: "Backend Developer",
         location: "London, United Kingdom",
         description:
@@ -70,6 +70,15 @@ export const experiencesData = [
             "I'ver build various applications for in-house operations including the contribution to an LMS with over 1 million user base. Besides, building software, I have also taught over 300 students about building real world applications using Django framework.",
         icon: React.createElement(CgWorkAlt),
         date: "Feb 2021 - April 2022",
+    },
+    {
+        company: "Daffodil Software Ltd",
+        title: "Odoo Developer Intern",
+        location: "Dhaka, Bangladesh",
+        description:
+            "As an Odoo developer intern, my responsibilities include learning the Odoo moduels & applications. I collaborate with senior developers to analyze requirements, propose solutions, and execute coding tasks. During internship, I also implemented the attendance & performance calculation functionality for both students & teachers is an EMIS project.",
+        icon: React.createElement(CgWorkAlt),
+        date: "Jan 2020 - June 2020",
     },
 ] as const;
 

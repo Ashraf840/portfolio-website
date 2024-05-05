@@ -6,7 +6,8 @@ import { projectsData } from "@/lib/data";
 import YouTube from 'react-youtube';
 import { AiOutlineLink } from "react-icons/ai";
 import { AiFillGithub } from "react-icons/ai";
-import Link from 'next/link'
+import Link from 'next/link';
+import { delay, motion } from 'framer-motion';
 
 function LeftAlignedLine() {
     return (
@@ -50,38 +51,97 @@ export default function ProjectSlug({ params }: {
                     {project.slug === params.projectSlug && (
                         <>
                             <div>
-                                <h1 className='text-5xl text-center'>
+                                <motion.h1 className='text-5xl text-center z-0'
+                                    initial={{ opacity: 0, y: 100 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{
+                                        delay: .5,
+                                    }}
+                                >
                                     {project.title}
-                                </h1>
-                                <Image
-                                    src={project.thumbnailImageUrl}
-                                    alt='Project Snapshot'
-                                    quality={95}
-                                    className='w-[44rem] h-[24rem] rounded-lg shadow-2xl mt-10 mx-auto' />
-                                <h3 className='text-xl font-bold text-center mt-10'>Link
+                                </motion.h1>
+                                <motion.div className='z-[1]'
+                                    initial={{ opacity: 0, scale: 0 }}
+                                    animate={{ opacity: 1, scale: 1 }}
+                                    transition={{
+                                        type: "spring",
+                                        duration: .2
+                                    }}
+                                >
+                                    <Image
+                                        src={project.thumbnailImageUrl}
+                                        alt='Project Snapshot'
+                                        quality={95}
+                                        className='w-[44rem] h-[24rem] rounded-lg shadow-2xl mt-10 mx-auto' />
+                                </motion.div>
+                                <motion.h3 className='text-xl font-bold text-center mt-10'
+                                    initial={{
+                                        opacity: 0,
+                                    }}
+                                    whileInView={{
+                                        opacity: 1,
+                                    }}
+                                    transition={{
+                                        duration: 1
+                                    }}
+                                    viewport={{
+                                        once: true
+                                    }}
+                                >
+                                    Link
                                     {(project?.hostedLink.length > 0) ? (
-                                        <Link className='flex justify-center mt-5' href={`${project?.hostedLink}`} target='_blank'>
-                                            <AiOutlineLink />
-                                        </Link>
+                                        <div className='flex justify-center mt-5'>
+                                            <Link className='p-2 opacity-70 hover:scale-125 hover:opacity-100 transition delay-[.5]' href={`${project?.hostedLink}`} target='_blank'>
+                                                <AiOutlineLink />
+                                            </Link>
+                                        </div>
                                     ) : null}
                                     {(project?.githubRepoLink.length > 0) ? (
-                                        <Link className='flex justify-center mt-5' href={`${project?.githubRepoLink}`} target='_blank'>
-                                            <AiFillGithub />
-                                        </Link>
+                                        <div className='flex justify-center mt-5'>
+                                            <Link className='p-2 opacity-70 hover:scale-125 hover:opacity-100 transition delay-[.5]' href={`${project?.githubRepoLink}`} target='_blank'>
+                                                <AiFillGithub />
+                                            </Link>
+                                        </div>
                                     ) : null}
-                                </h3>
+                                </motion.h3>
                             </div>
                             {(project?.projectBrief) ? (
-                                <div className='max-w-[60%] mt-20' style={{ display: 'flex', alignItems: 'center', position: 'relative' }}>
+                                <motion.div className='max-w-[60%] mt-20' style={{ display: 'flex', alignItems: 'center', position: 'relative' }}
+                                    initial={{
+                                        opacity: 0,
+                                    }}
+                                    whileInView={{
+                                        opacity: 1,
+                                    }}
+                                    transition={{
+                                        duration: 1
+                                    }}
+                                    viewport={{
+                                        once: true
+                                    }}
+                                >
                                     <LeftAlignedLine />
                                     <div style={{ flex: 1 }}>
                                         <h1 className='text-3xl'>Project Brief</h1>
                                         <p>{project?.projectBrief}</p>
                                     </div>
-                                </div>
+                                </motion.div>
                             ) : null}
                             {(project?.keyFeatures.length > 0) ? (
-                                <div className='w-[60%] mt-20' style={{ display: 'flex', alignItems: 'center', position: 'relative' }}>
+                                <motion.div className='w-[60%] mt-20' style={{ display: 'flex', alignItems: 'center', position: 'relative' }}
+                                    initial={{
+                                        opacity: 0,
+                                    }}
+                                    whileInView={{
+                                        opacity: 1,
+                                    }}
+                                    transition={{
+                                        duration: 1
+                                    }}
+                                    viewport={{
+                                        once: true
+                                    }}
+                                >
                                     <LeftAlignedLine />
                                     <div style={{ flex: 1 }}>
                                         <h1 className='text-3xl'>Key Features</h1>
@@ -93,28 +153,67 @@ export default function ProjectSlug({ params }: {
                                             ))}
                                         </ul>
                                     </div>
-                                </div>
+                                </motion.div>
                             ) : null}
                             {(project?.benefits) ? (
-                                <div className='max-w-[60%] mt-20' style={{ display: 'flex', alignItems: 'center', position: 'relative' }}>
+                                <motion.div className='max-w-[60%] mt-20' style={{ display: 'flex', alignItems: 'center', position: 'relative' }}
+                                    initial={{
+                                        opacity: 0,
+                                    }}
+                                    whileInView={{
+                                        opacity: 1,
+                                    }}
+                                    transition={{
+                                        duration: 1
+                                    }}
+                                    viewport={{
+                                        once: true
+                                    }}
+                                >
                                     <LeftAlignedLine />
                                     <div style={{ flex: 1 }}>
                                         <h1 className='text-3xl'>Benefits</h1>
                                         <p>{project?.benefits}</p>
                                     </div>
-                                </div>
+                                </motion.div>
                             ) : null}
 
-                            <div>
-
-                            </div>
-
                             <div className='w-[60%] mt-20'>
-                                <h1 className='text-3xl text-center'>Features I&apos;ve Built</h1>
+                                <motion.h1 className='text-3xl text-center'
+                                    initial={{
+                                        opacity: 0,
+                                        x: 100
+                                    }}
+                                    whileInView={{
+                                        opacity: 1,
+                                        x: 0
+                                    }}
+                                    transition={{
+                                        duration: .5
+                                    }}
+                                    viewport={{
+                                        once: true
+                                    }}
+                                >Features I&apos;ve Built</motion.h1>
                                 {Object.keys(project.projectFeaturesDetail).map((ftKey) => {
                                     const vidIdObject = { vidId: project.projectFeaturesDetail[ftKey].video };
                                     return (
-                                        <div className='mt-20' key={ftKey}>
+                                        <motion.div className='mt-20 last:mb-20' key={ftKey}
+                                            initial={{
+                                                opacity: 0,
+                                                x: -100
+                                            }}
+                                            whileInView={{
+                                                opacity: 1,
+                                                x: 0
+                                            }}
+                                            transition={{
+                                                duration: .5
+                                            }}
+                                            viewport={{
+                                                once: true
+                                            }}
+                                        >
                                             <h1 className='text-xl font-semibold'>{project.projectFeaturesDetail[ftKey].name}</h1>
                                             <p>{project.projectFeaturesDetail[ftKey].description}</p>
                                             {(vidIdObject?.vidId.length > 0) ? (
@@ -122,7 +221,7 @@ export default function ProjectSlug({ params }: {
                                                     <YouTubePlayer vidId={vidIdObject} />
                                                 </div>
                                             ) : null}
-                                        </div>
+                                        </motion.div>
                                     )
                                 })}
                             </div>

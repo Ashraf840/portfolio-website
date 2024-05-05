@@ -221,11 +221,12 @@ export const projectsData = [
         hostedLink: "",
         githubRepoLink: "https://github.com/Ashraf840/multi-vendor-food-ordering-system.git",
         projectThumbnailBrief:
-            "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-        projectBrief: "",
+            "This was my university final year project. I made the reasearch on mitigating business losses of fine dine by building a more customer-centric system ensuring broader scope of engagement.",
+        projectBrief: "The research-based project proposes developing a multi-vendor food ordering system for fine dining businesses to recover from COVID-19 losses. It aims to understand the challenges faced by these establishments and design a user-friendly solution. The methodology involves gathering insights through interviews, surveys, and market analysis. The software development process will be iterative, focusing on supporting multiple vendors and enhancing user experience. Evaluation metrics include order processing time, customer satisfaction, and revenue growth. The project seeks to empower fine dining establishments to adapt to changing consumer behaviors and enhance operational efficiency post-pandemic.",
         tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-        keyFeatures: [],
-        benefits: "",
+        keyFeatures: ["B2B Vendor (Restaurant) Module", "B2C Customer Module", "User can order foods by surfing different available restaurants in the system", "Restaurant staffs required approval from their respective restaurant admins to access into to the system", "Restaurant admin can suspend individual staff from accessing into the system", "Separate blogging system for the food critics", "User can view, comments, like & provide ratings to food dishes", "User can view the progress of his/her food in real time through the system", "System staff can change the stages of ordered food in real time", `User cannot cancel his/her order once the food gets into the "Baking" stage in restaurant kitchen`, `Integrated a native payment gateway (sandbox) called "SSLCOMMERZ" to purchase cart orders, including "Cash On Delivery" option`],
+        benefits: `
+        The envisioned multi-vendor food ordering system presents a myriad of advantages for fine dining establishments striving to bounce back from COVID-19 setbacks. Delving into the unique hurdles they encounter, the project endeavors to craft a user-friendly solution finely attuned to their specific requirements. Through an iterative approach to software development, the system places a premium on accommodating multiple vendors and refining the user experience. Ultimately, this initiative empowers fine dining venues to adeptly respond to shifting consumer trends while bolstering operational effectiveness, fostering their resurgence and sustained prosperity in the post-pandemic era.`,
         thumbnailImageUrl: onlineFoodOrderingSystem,
         projectSnaps: [onlineFoodOrderingSystem],
         projectFeaturesDetail: {
@@ -298,6 +299,7 @@ export const skillsData = [
     "AWS API Gateway",
     "Apache Airflow",
     "Linux",
+    "Shell Script",
     "Rust",
     "Slack",
     "Atlassian Jira",

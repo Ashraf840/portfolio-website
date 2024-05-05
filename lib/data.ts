@@ -95,6 +95,8 @@ export const projectsData = [
     {
         title: "iBAS++ Chat Operating System",
         slug: "ibas-chat-operating-system",
+        hostedLink: "http://103.209.40.15:8080/",
+        githubRepoLink: "",
         projectThumbnailBrief:
             "I worked as a full-stack engineer on this government project for over a year. User can chat with Help Desk Officers to resolve queries.",
         projectBrief: "iBAS++ Chat Operating System is a cutting-edge solution to mitiagte the pressure from the iBAS++ staff. Integrated Budget and Accounting System (iBAS++) is the Integrated Financial Management Information System (IFMIS) of the Government of Bangladesh (GoB). Government officials from over the country contact iBAS++ for any kind of financial queries. Handling such massive amount of queries become difficult for the internal staffs. Thus the organization decided to circulate a tender for a software which will have an AI powered chatbot to provide relevant answers to those queries and for any unknown queries, the chatbot will redirect the user to an available Help Desk Officer. After joining my last company, I was given the task to build such system & got tagged with a team of ML engineers. Playing a pivotal role building this software, I got an exposure to a deep knowledge of asynchronous programming as part of my research. This is a solution where the ML technology meets the asynchronous programming in the Government sector for the first time. With heavy usage of Django Channels and JavaScript websocket, we built a solution where a Rasa chatbot tries to provide answers to the queries. This is an FAQ based chatbot, built by the ML engineers. I have built the software solution which provides chatting features, asynchronous message requests routing based on Location & Priority based algorithm, Data Analytics Panel for adminstrators. WIth this solution iBAS++ is now able to handle different client queries by using the chatbot & the internal staffs only handle issues with unknown queries thorugh chatting with the users in a chatroom. I have also built another micro-service where the admin can access to the Data Analytics Panel to manually create new queries as well select chatbot's fall back queries, then train the chatbot with those queries. This another service, I've built using the Django Rest Framework to serve the APIs & Angular 16 as the frontend. In this service, beside building the CRUD APIs, I have also integrated real time progress of AI model training or clustering into this service. iBAS++ has decided for a pilot implementation of this solution into their exisiting system. I have also worked for the deployment procedure for the provisioned Linux servers.",
@@ -182,6 +184,8 @@ export const projectsData = [
     {
         title: "TechForing Website",
         slug: "techforing-website",
+        hostedLink: "https://www.techforing.com/",
+        githubRepoLink: "",
         projectThumbnailBrief:
             "I've built the CI/CD pipeline using Jenkins & established continuous deployment of various projects into AWS EC2.",
         projectBrief: "Shifted the exisiting blog management system from WordPress to the exisiting TechForing business website without breaking the link of different blogs since they were backlinked to different prestigious articles. The TechForing website is the paltform to increase awareness on cyber security & cyber menace through different articles. Besides, it also provides subscription and selling of cyber security courses & services. As an enrty point of the monetization funnel, this web application is integrated with their HRMS & LMS. TechForing Ltd is known for providing paramount service in the Cyber Security to all size & shapes of businesses across the world. Thus this website plays a pivotal role to the business, I have ensured that the viewers can be converted to potential customers by having seamless experience when visited this website.",
@@ -214,6 +218,8 @@ export const projectsData = [
     {
         title: "Multi Vendor Food Ordering System",
         slug: "multi-vendor-food-ordering-system",
+        hostedLink: "",
+        githubRepoLink: "https://github.com/Ashraf840/multi-vendor-food-ordering-system.git",
         projectThumbnailBrief:
             "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
         projectBrief: "",

@@ -4,6 +4,9 @@ import React from 'react'
 import Image from 'next/image'
 import { projectsData } from "@/lib/data";
 import YouTube from 'react-youtube';
+import { AiOutlineLink } from "react-icons/ai";
+import { AiFillGithub } from "react-icons/ai";
+import Link from 'next/link'
 
 function LeftAlignedLine() {
     return (
@@ -55,6 +58,18 @@ export default function ProjectSlug({ params }: {
                                     alt='Project Snapshot'
                                     quality={95}
                                     className='w-[44rem] h-[24rem] rounded-lg shadow-2xl mt-10 mx-auto' />
+                                <h3 className='text-xl font-bold text-center mt-10'>Link
+                                    {(project?.hostedLink.length > 0) ? (
+                                        <Link className='flex justify-center mt-5' href={`${project?.hostedLink}`} target='_blank'>
+                                            <AiOutlineLink />
+                                        </Link>
+                                    ) : null}
+                                    {(project?.githubRepoLink.length > 0) ? (
+                                        <Link className='flex justify-center mt-5' href={`${project?.githubRepoLink}`} target='_blank'>
+                                            <AiFillGithub />
+                                        </Link>
+                                    ) : null}
+                                </h3>
                             </div>
                             {(project?.projectBrief) ? (
                                 <div className='max-w-[60%] mt-20' style={{ display: 'flex', alignItems: 'center', position: 'relative' }}>

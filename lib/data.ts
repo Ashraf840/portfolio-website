@@ -139,7 +139,7 @@ export const projectsData = [
                 name: "1-to-1 Messaging Platform for User & HDO",
                 description: `The user of the system gets redirected to a real time messaging platform where the issue is mostly resolved by an HDO. In this platform, the HDO has three options: "Issue Details", "Resolve Issue" & "Dismiss Issue". From them, the HDO can mark the issue as resolved/dismissed, which leads to notify the user about the issue status & automatically redirect him/her to a landing page. On the other side, the user have only two options: "Issue Details" & "Dismiss Chat". The user can cancel the chat by the "Dismiss Chat" option. In this scenario, the HDO won't get redirected to her/his support request panel, instead, she/he will be notified with a chat cancellation message including a "close chat" button. By clicking the close chat button, the HDO will get back to the support request panel followed by closing the chat window.`,
                 image: ["img1"],
-                video: '',
+                video: 'm4H-aYL36nk',
             },
             feature7: {
                 name: "Fetch Previous Messaging Between User & Chatbot in the Chatroom",

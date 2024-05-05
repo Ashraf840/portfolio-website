@@ -34,7 +34,7 @@ type ProjectProps = (typeof projectsData)[number]
 export default function Project({ title, slug, projectThumbnailBrief, thumbnailImageUrl, projectSnaps }: ProjectProps) {
     const projectSnapLength = projectSnaps.length;
     return (
-        <div className='mt-10 mb-3 sm:mb-28 last:mb-0'>
+        <div className='max-w-[60rem] mt-10 mb-3 sm:mb-28 last:mb-0'>
             <Link href={`/projects/${slug}`}>
                 <motion.section
                     initial={{
@@ -56,7 +56,7 @@ export default function Project({ title, slug, projectThumbnailBrief, thumbnailI
                     <div>
                         <h3 className='font-semibold mt-2'>{projectThumbnailBrief}</h3>
                     </div>
-                    <div className={`flex ${projectSnapLength > 1 ? 'justify-between' : 'justify-center'} mt-8`}>
+                    <div className={`flex ${projectSnapLength > 1 ? 'justify-between' : 'justify-center'} mt-8 gap-10`}>
                         {projectSnaps.map((snaps, index) => {
                             const animationVariants = index % 2 === 0 ? fadeInFromLeftAnimationVariants : fadeInFromRightAnimationVariants;
                             return (

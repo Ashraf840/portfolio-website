@@ -19,7 +19,7 @@ export default function About() {
             id='about'
         >
             <SectionHeading>
-                <Link href='/profile'>About me</Link>
+                <p>About Me</p>
             </SectionHeading>
             <p className="mb-3">
                 I&apos;m a seasoned software engineer with <span className="font-medium">four years</span> of hands-on experience crafting robust, scalable solutions across diverse domains. My passion for problem-solving propels me to explore and master new technologies continually. Proficient in <span className="italic">Python, JavaScript, Angular, Django, TypeScript, HTML, CSS, and Tailwind</span>, I excel in <span className="font-medium">dynamic, innovative environments</span>. With expertise in back-end technologies like Docker, Git, PostgreSQL, FastAPI, WebSocket, and webRTC, I design and implement efficient <span className="font-medium">RESTful APIs</span> and <span className="font-medium underline">real-time applications</span>, ensuring seamless client-server communication. I deploy and manage applications effortlessly using NGINX, uWSGI, Gunicorn, Daphne, and Redis.

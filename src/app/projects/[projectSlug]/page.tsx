@@ -9,14 +9,14 @@ import { AiFillGithub } from "react-icons/ai";
 import Link from 'next/link';
 import { delay, motion } from 'framer-motion';
 
-function LeftAlignedLine() {
-    return (
-        <>
-            <div className='bg-black dark:bg-white/20' style={{ position: 'absolute', top: -15, left: '-5px', width: '12px', height: '12px', borderRadius: '50%' }}></div>
-            <div className='border-l-2 border-black dark:border-white/20' style={{ height: '10rem', marginRight: '1rem' }}></div>
-        </>
-    )
-}
+// function LeftAlignedLine() {
+//     return (
+//         <>
+//             <div className='bg-black dark:bg-white/20' style={{ top: -15, left: '-5px', width: '12px', height: '12px', borderRadius: '50%' }}></div>
+//             <div className='border-l-2 border-black dark:border-white/20 h-40' style={{ marginRight: '1rem' }}></div>
+//         </>
+//     )
+// }
 
 interface YouTubePlayerProps {
     vidId: {
@@ -24,19 +24,63 @@ interface YouTubePlayerProps {
     };
 }
 
+// const YouTubePlayer: React.FC<YouTubePlayerProps> = ({ vidId }) => {
+//     const videoId = vidId?.vidId;
+
+//     const opts = {
+//         height: '390',
+//         width: '640',
+//         playerVars: {
+//             autoplay: 0,
+//         },
+//     };
+
+//     return (
+//         <YouTube videoId={videoId} opts={opts} />
+//     );
+// };
+
 const YouTubePlayer: React.FC<YouTubePlayerProps> = ({ vidId }) => {
     const videoId = vidId?.vidId;
 
+    // Define options with dynamic width and height
     const opts = {
-        height: '390',
-        width: '640',
+        height: '100%',
+        width: '100%',
         playerVars: {
             autoplay: 0,
         },
     };
 
+    // Set up a state to track the container width
+    const [containerWidth, setContainerWidth] = React.useState<number>(0);
+
+    // Function to update container width
+    const updateContainerWidth = () => {
+        const width = document.getElementById('youtube-container')?.clientWidth;
+        if (width) {
+            setContainerWidth(width);
+        }
+    };
+
+    // Update container width on component mount and window resize
+    React.useEffect(() => {
+        updateContainerWidth();
+        window.addEventListener('resize', updateContainerWidth);
+        return () => {
+            window.removeEventListener('resize', updateContainerWidth);
+        };
+    }, []);
+
     return (
-        <YouTube videoId={videoId} opts={opts} />
+        // <div id="youtube-container sm:!pb-0" style={{ width: '100%', height: '0', paddingBottom: `${(containerWidth / 16) * 15}px`, position: 'relative' }}>
+        //     <YouTube videoId={videoId} opts={{ ...opts, width: '100%', height: '390' }} />
+        // </div>
+        <div id="youtube-container" className="relative w-full">
+            <div className="w-full pb-[calc(100%/16*19)] sm:pb-[28rem] mt-4" style={{ height: '0' }}>
+                <YouTube videoId={videoId} opts={{ ...opts, width: '100%', height: '390' }} />
+            </div>
+        </div>
     );
 };
 
@@ -106,7 +150,7 @@ export default function ProjectSlug({ params }: {
                                 </motion.h3>
                             </div>
                             {(project?.projectBrief) ? (
-                                <motion.div className='max-w-[60%] mt-20' style={{ display: 'flex', alignItems: 'center', position: 'relative' }}
+                                <motion.div className='max-w-[90%] sm:max-w-[60%] mt-20' style={{ display: 'flex', alignItems: 'center', position: 'relative' }}
                                     initial={{
                                         opacity: 0,
                                     }}
@@ -120,7 +164,7 @@ export default function ProjectSlug({ params }: {
                                         once: true
                                     }}
                                 >
-                                    <LeftAlignedLine />
+                                    {/* <LeftAlignedLine /> */}
                                     <div style={{ flex: 1 }}>
                                         <h1 className='text-3xl'>Project Brief</h1>
                                         <p>{project?.projectBrief}</p>
@@ -128,7 +172,7 @@ export default function ProjectSlug({ params }: {
                                 </motion.div>
                             ) : null}
                             {(project?.keyFeatures.length > 0) ? (
-                                <motion.div className='w-[60%] mt-20' style={{ display: 'flex', alignItems: 'center', position: 'relative' }}
+                                <motion.div className='max-w-[90%] sm:max-w-[60%] mt-20' style={{ display: 'flex', alignItems: 'center', position: 'relative' }}
                                     initial={{
                                         opacity: 0,
                                     }}
@@ -142,7 +186,7 @@ export default function ProjectSlug({ params }: {
                                         once: true
                                     }}
                                 >
-                                    <LeftAlignedLine />
+                                    {/* <LeftAlignedLine /> */}
                                     <div style={{ flex: 1 }}>
                                         <h1 className='text-3xl'>Key Features</h1>
                                         <ul>
@@ -156,7 +200,7 @@ export default function ProjectSlug({ params }: {
                                 </motion.div>
                             ) : null}
                             {(project?.benefits) ? (
-                                <motion.div className='max-w-[60%] mt-20' style={{ display: 'flex', alignItems: 'center', position: 'relative' }}
+                                <motion.div className='max-w-[90%] sm:max-w-[60%] mt-20' style={{ display: 'flex', alignItems: 'center', position: 'relative' }}
                                     initial={{
                                         opacity: 0,
                                     }}
@@ -170,7 +214,7 @@ export default function ProjectSlug({ params }: {
                                         once: true
                                     }}
                                 >
-                                    <LeftAlignedLine />
+                                    {/* <LeftAlignedLine /> */}
                                     <div style={{ flex: 1 }}>
                                         <h1 className='text-3xl'>Benefits</h1>
                                         <p>{project?.benefits}</p>
@@ -178,7 +222,7 @@ export default function ProjectSlug({ params }: {
                                 </motion.div>
                             ) : null}
 
-                            <div className='w-[60%] mt-20'>
+                            <div className='max-w-[90%] sm:max-w-[60%] mt-20'>
                                 <motion.h1 className='text-3xl text-center'
                                     initial={{
                                         opacity: 0,

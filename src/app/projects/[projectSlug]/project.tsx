@@ -56,7 +56,7 @@ export default function Project({ title, slug, projectThumbnailBrief, thumbnailI
                     <div>
                         <h3 className='font-semibold mt-2'>{projectThumbnailBrief}</h3>
                     </div>
-                    <div className={`flex ${projectSnapLength > 1 ? 'justify-between' : 'justify-center'} mt-8 gap-10`}>
+                    <div className={`flex flex-col sm:flex-row ${projectSnapLength > 1 ? 'justify-between' : 'justify-center'} mt-8 gap-10`}>
                         {projectSnaps.map((snaps, index) => {
                             const animationVariants = index % 2 === 0 ? fadeInFromLeftAnimationVariants : fadeInFromRightAnimationVariants;
                             return (

@@ -49,7 +49,7 @@ export default function Intro() {
                 initial={{ opacity: 0, y: 100 }}
                 animate={{ opacity: 1, y: 0 }}
             >
-                <span className="font-bold">Hello, I&apos;m Kh Tanjim Ashraf.</span> I&apos;m a <span className="font-bold">software engineer</span> with <span className="font-bold">4 years</span> of experience. I build web apps with <span className="italic">real-world significance.</span>
+                <span className="font-bold">Hello, I&apos;m Kh Tanjim Ashraf.</span> I&apos;m a <span className="font-bold">software engineer</span> with <span className="font-bold">3 years</span> of experience. I build web apps with <span className="italic">real-world significance.</span>
             </motion.h1>
 
             <motion.div className='flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium'

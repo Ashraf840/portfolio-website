@@ -324,7 +324,7 @@ export const skillsData = [
     "Amazon EC2",
     "Aamazon RDS",
     "Amazon S3",
-    "Aamazon Route 53",
+    "Aamazon Route53",
     "Linux",
     "Slack",
     "Atlassian Jira",

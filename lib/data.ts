@@ -51,7 +51,7 @@ export const experiencesData = [
         description:
             "I served as a software engineer with the responsibility to build & maintain cutting-edge software & seamless deployment. My stack includes Django, Flask, Angular, Pandas, Numpy, Asynchronous Programming, DRF, PostgreSQL, ClickHouse, Docker, Docker Compose",
         icon: React.createElement(CgWorkAlt),
-        date: "Feb 2021 - April 2024",
+        date: "Feb 2021 - March 2024",
     },
     {
         company: "TechForing Ltd",
